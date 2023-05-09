@@ -1,0 +1,22 @@
+import collections
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        max_len = 0
+
+        q = collections.deque()
+
+        for i in s:
+            # 큐에 들어있지 않으면 삽입
+            if i not in q:
+                q.append(i)
+            else:
+                index = q.index(i)
+                # 인덱스까지의 모든 요소를 pop
+                for j in range(index + 1):
+                    q.popleft()
+                # 다시 분자열을 넣어줌
+            q. append(i)
+        # 문자열이 들어오고 나갈 때마다 최대값을 비교
+        max_len = max(max_len, len(q))
+
+        return max_len
