@@ -1,0 +1,11 @@
+class Solution:
+    def arrangeCoins(self, n: int) -> int:
+        result = 0 # 한 층에 코인이 모두 채워진 층 수
+        row = 1 # 계단 층 수
+        while n > 0:
+            n -= row
+            row += 1
+            result += 1
+        if n < 0:
+            return result - 1
+        return result
