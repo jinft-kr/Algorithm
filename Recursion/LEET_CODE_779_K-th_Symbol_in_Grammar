@@ -1,0 +1,13 @@
+class Solution:
+    def kthGrammar(self, n: int, k: int) -> int:
+        # # Time Limit Exceeded
+        # s = "0"
+        # for i in range(n) :
+        #     t = ""
+        #     for c in s :
+        #         if c == "0":
+        #             t += "01"
+        #         else :
+        #             t += "10"
+        #     s = t
+        # return int(s[k-1])
