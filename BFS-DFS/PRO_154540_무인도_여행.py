@@ -26,4 +26,4 @@ def solution(maps):
                             q.append((ax, ay))
 
                 answer.append(period)
-    return answer
+    return sorted(answer) if answer else [-1]
